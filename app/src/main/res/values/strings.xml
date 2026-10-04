@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">TransportBookingQA</string>
+    <string name="hint_nik">NIK Penumpang (16 digit)</string>
+    <string name="hint_nama">Nama Penumpang</string>
+    <string name="booking_submit">Pesan Tiket</string>
+    <string name="booking_berhasil">Pemesanan Tiket Berhasil Diverifikasi</string>
+    <string name="error_nik_kosong">NIK tidak boleh kosong</string>
+    <string name="error_nik_tidak_valid">NIK harus 16 digit angka</string>
+    <string name="error_nama_kosong">Nama tidak boleh kosong</string>
+</resources>
