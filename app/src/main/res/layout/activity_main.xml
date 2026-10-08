@@ -1,68 +1,140 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:fillViewport="true">
+    android:fillViewport="true"
+    android:background="#F5F3FF">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="24dp">
+        android:padding="20dp">
 
+        <!-- Header -->
         <TextView
             android:id="@+id/tvTitle"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/app_name"
-            android:textSize="20sp"
-            android:textStyle="bold" />
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:textColor="#312E81"
+            android:layout_marginTop="8dp" />
 
-        <EditText
-            android:id="@+id/etNik"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:autofillHints="none"
-            android:hint="@string/hint_nik"
-            android:importantForAutofill="no"
-            android:inputType="number"
-            android:maxLength="16" />
-
-        <!-- Pesan error validasi NIK; default GONE, dibuat VISIBLE oleh MainActivity saat validasi gagal -->
         <TextView
-            android:id="@+id/tvNikError"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="4dp"
-            android:textColor="#D32F2F"
-            android:textSize="14sp"
-            android:visibility="gone" />
+            android:text="Silakan lengkapi data untuk melakukan booking"
+            android:textSize="13sp"
+            android:textColor="#6B7280"
+            android:layout_marginTop="5dp"
+            android:layout_marginBottom="20dp" />
 
-        <EditText
-            android:id="@+id/etName"
+        <!-- Form Card -->
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="16dp"
-            android:autofillHints="none"
-            android:hint="@string/hint_nama"
-            android:importantForAutofill="no"
-            android:inputType="textPersonName" />
+            android:orientation="vertical"
+            android:padding="18dp"
+            android:background="#FFFFFF">
 
-        <Button
-            android:id="@+id/btnSubmitBooking"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:text="@string/booking_submit" />
+            <!-- NIK -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nomor Identitas"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#374151"
+                android:layout_marginBottom="6dp" />
 
+            <EditText
+                android:id="@+id/etNik"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:autofillHints="none"
+                android:hint="@string/hint_nik"
+                android:importantForAutofill="no"
+                android:inputType="number"
+                android:maxLength="16"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:background="@android:drawable/editbox_background_normal" />
+
+            <!-- Error NIK -->
+            <TextView
+                android:id="@+id/tvNikError"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:textColor="#DC2626"
+                android:textSize="12sp"
+                android:visibility="gone" />
+
+            <!-- Nama -->
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Nama Lengkap"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="#374151"
+                android:layout_marginTop="18dp"
+                android:layout_marginBottom="6dp" />
+
+            <EditText
+                android:id="@+id/etName"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:autofillHints="none"
+                android:hint="@string/hint_nama"
+                android:importantForAutofill="no"
+                android:inputType="textPersonName"
+                android:textSize="14sp"
+                android:paddingHorizontal="14dp"
+                android:textColor="#111827"
+                android:textColorHint="#9CA3AF"
+                android:background="@android:drawable/editbox_background_normal" />
+
+            <!-- Submit -->
+            <Button
+                android:id="@+id/btnSubmitBooking"
+                android:layout_width="match_parent"
+                android:layout_height="52dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/booking_submit"
+                android:textSize="14sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+                android:backgroundTint="#7C3AED" />
+
+        </LinearLayout>
+
+        <!-- Status -->
         <TextView
             android:id="@+id/tvBookingStatus"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="24dp"
-            android:textSize="16sp"
+            android:layout_marginTop="20dp"
+            android:padding="16dp"
+            android:textSize="14sp"
+            android:textColor="#312E81"
+            android:background="#EDE9FE"
             android:visibility="gone" />
+
+        <!-- Footer -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Pastikan data yang dimasukkan sudah benar sebelum melakukan booking."
+            android:textSize="11sp"
+            android:textColor="#9CA3AF"
+            android:gravity="center"
+            android:layout_marginTop="16dp" />
 
     </LinearLayout>
 
